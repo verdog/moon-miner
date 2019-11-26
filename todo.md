@@ -1,13 +1,15 @@
 # todo
-- better pickaxe recharge
++ better pickaxe recharge
 - a goal
-- a way to recover health
-- ammo ore art
+    - kill all enemies
++ a way to recover health
++ ammo ore art
 - sounds
 - music
 - title screen
 - another enemy
 - another enemy
++ make ammo more fun
 
 # stretch
 - better item controls
