@@ -1,7 +1,6 @@
 # todo
 + better pickaxe recharge
-- a goal
-    - kill all enemies
++ a goal
 + a way to recover health
 + ammo ore art
 - sounds
