@@ -1091,6 +1091,17 @@ _scorp = _actor:new({
 	hp=66
 })
 
+function _snout:take_damage(d)
+	self.hp -= d
+	vfx_p_blood(self.x+4,self.y+4,.5+rnd(1),15+rnd(12),8,3)
+
+	if self.state == "movel" then
+		add(self.states, "mover")
+	elseif self.state == "mover" then
+		add (self.states, "movel")
+	end
+end
+
 function _snout:die()
 	vfx_p_death(self.x+8,self.y+8,.5+rnd(1),15+rnd(12),8,6)
 	vfx_shake(8)
@@ -1110,7 +1121,7 @@ end
 
 function _snout:update()
 	self.statet -= 1
-	
+		
 	if self.hp <= 0 then
 		self:die()
 		return
@@ -1202,6 +1213,11 @@ function _snout:draw()
 	dsprite += 2*flr(sspeed*t()%2)
 	
 	spr(dsprite, self.x, self.y,2,2,flipx)
+end
+
+function _scorp:take_damage(d)
+	self.hp -= d
+	vfx_p_blood(self.x+4,self.y+4,.5+rnd(1),15+rnd(12),8,3)
 end
 
 function _scorp:die()
@@ -1370,8 +1386,7 @@ function _proj:actor_physics()
 	for e in all(enemies) do
 		local a = self:collides(e)
 		if a then
-			a.hp -= self.damage
-			vfx_p_blood(self.x+4,self.y+4,.5+rnd(1),15+rnd(12),8,3)
+			e:take_damage(self.damage)
 			vfx_shake(2)
 			self:die()
 		end
