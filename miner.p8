@@ -11,7 +11,7 @@ function start_level()
 	vfx_init()
 	enemies_init()
 	proj_init()
-	map_init() -- generates enemies
+	map_init() -- generates enemies too
 	
 	player.x = 0
 	player.y = 0
@@ -307,6 +307,14 @@ function _actor:has_los(a,dx,dy)
 	return false
 end
 
+function _actor:state()
+ if self.states != nil then
+  return self.states[#self.states]
+ else
+  return nil
+ end
+end
+
 function _actor:pops()
 	local s = self.states[#self.states]
 	self.states[#self.states] = nil
@@ -438,7 +446,6 @@ function _player:control()
 	 	self:impulse(0,-self.yjump)
 	 end
 	end
-	debug(self.fuel)
 	
 	debug(self.x..":"..self.y, "xy")
 	
@@ -487,8 +494,10 @@ end
 
 function _player:a()
 	if self.weapon == 0 then
+		-- pickaxe
 		return btn(❎)
 	else
+		-- gun
 	 return btnp(❎)
 	end
 end
@@ -511,12 +520,13 @@ function _player:hit_enemy(e)
 	self.hp -= e.damage
 	self:inv(30)
 	vfx_p_blood(self.x+4,self.y+4,.5+rnd(1),15+rnd(12),8,6)
+	vfx_shake(4)
 end
 
 function _player:hit_proj(p)
 	self.hp -= p.damage
 	vfx_p_blood(self.x+4,self.y+4,.5+rnd(1),15+rnd(12),8,6)
-	vfx_shake(2)
+	vfx_shake(4)
 end
 
 function _player:inv(t)
@@ -1095,9 +1105,9 @@ function _snout:take_damage(d)
 	self.hp -= d
 	vfx_p_blood(self.x+4,self.y+4,.5+rnd(1),15+rnd(12),8,3)
 
-	if self.state == "movel" then
+	if self:state() == "movel" then
 		add(self.states, "mover")
-	elseif self.state == "mover" then
+	elseif self:state() == "mover" then
 		add (self.states, "movel")
 	end
 end
@@ -1136,8 +1146,7 @@ function _snout:update()
 		self.states = {[1]="mover"}
 	end
 	
-	local state = self.states[#self.states]
-	self.state = state
+	local state = self:state()
 	
 	if state == "mover" then
 		self.xinp = 1
@@ -1206,7 +1215,7 @@ function _snout:draw()
 	local flipx = self.xinp > 0
 	local sspeed = 2
 	
-	if self.state == "runr" or self.state == "runl" then
+	if self:state() == "runr" or self:state() == "runl" then
 		sspeed = 8
 	end
 	
@@ -1217,7 +1226,14 @@ end
 
 function _scorp:take_damage(d)
 	self.hp -= d
-	vfx_p_blood(self.x+4,self.y+4,.5+rnd(1),15+rnd(12),8,3)
+ vfx_p_blood(self.x+4,self.y+4,.5+rnd(1),15+rnd(12),8,3)
+ 
+ if self:state() != "shoot" 
+ and self:state() != "yump" then
+  -- yump
+  add(self.states,"yump")
+  self.statet = 45
+ end
 end
 
 function _scorp:die()
@@ -1239,7 +1255,7 @@ end
 
 function _scorp:update()
 	self.statet -= 1
-	
+ 
 	if self.hp <= 0 then
 		self:die()
 		return
@@ -1255,8 +1271,13 @@ function _scorp:update()
 	end
 	
 	local state = self.states[#self.states]
-	debug(state)
-	
+ local str = ""
+ for s in all(self.states) do
+  str = str..s.." "
+ end
+ debug(str)
+ debug(self.statet)
+ 
 	if state == "mover" or state == "movel" then
 		if flr((self.y+8)/16) == flr((player.y+4)/16) 
 		and (self:has_los(player,3,0) or self:has_los(player,-3,0))
@@ -1307,7 +1328,7 @@ function _scorp:update()
 	and state != "yump"
 	and self:has_los(player,0,-3)
 	then
-		-- yump
+  -- yump
 		add(self.states,"yump")
 		self.statet = 45
 	end	
