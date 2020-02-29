@@ -775,14 +775,25 @@ end
 function ui_update(p)
 	messt += 1
 	
-	if messt%60 == 0 then
+	if messt%120 == 0 then
 		del(messq, messq[1])
 	end
 end
 
 function ui_draw(p)
 	-- message q
-	for i=1,#messq do
+	-- bouncy first message
+	if #messq > 0 then
+		local xo = 8 * abs(sin(t()/2))^2
+		for j=-1,1 do
+			for k=-1,1 do
+				print(messq[1],_global.cam.x+2+j+xo,_global.cam.y+133-6-6+k,7)
+			end
+		end
+		print(messq[1],_global.cam.x+2+xo,_global.cam.y+133-6-6,0)
+	end
+	
+	for i=2,#messq do
 		for j=-1,1 do
 			for k=-1,1 do
 				print(messq[i],_global.cam.x+2+j,_global.cam.y+133-6*i-6+k,7)
