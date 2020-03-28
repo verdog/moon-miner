@@ -10,10 +10,15 @@
 - bat
 + make ammo more fun
 - proper game loop
-    - rescue miners
-    - upgrades
+    - get to door at bottom of level
     - score
 - lava
 
 # stretch
 - better item controls
+- upgrades
+    - upgrade ideas
+        - more damage
+        - faster pickaxe recharge
+        - more ammo spawn
+        - more max health
