@@ -10,12 +10,10 @@
 - bat
 + make ammo more fun
 - proper game loop
-    - requests from customers
+    - rescue miners
     - upgrades
-    - score/money
-    - need an amount of money to not go out of business
+    - score
+- lava
 
 # stretch
 - better item controls
-- lava
-
