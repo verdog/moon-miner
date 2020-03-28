@@ -102,7 +102,8 @@ end
 function _health:actor_physics()
 	if self:collides(player) then
 		player.hp = min(player.maxhp, player.hp - self.damage)
-		self:die()
+  message("health!")
+  self:die()
 	end
 end
 

@@ -11,6 +11,7 @@
 + make ammo more fun
 - proper game loop
     - get to door at bottom of level
+        - requires ammo to enter
     - score
 - lava
 
