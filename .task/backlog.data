@@ -1,0 +1,12 @@
+{"description":"finish it lol","end":"20200330T191013Z","entry":"20200327T154517Z","modified":"20200330T191015Z","project":"miner","status":"deleted","uuid":"2dc71aef-7e12-40e6-9030-aa4a0322f83c"}
+{"description":"sounds","entry":"20200330T191034Z","modified":"20200330T191034Z","priority":"L","project":"miner","status":"pending","uuid":"3ea0fed5-8629-48e0-9b20-5b724db5c924"}
+{"description":"music","entry":"20200330T191042Z","modified":"20200330T191042Z","priority":"L","project":"miner","status":"pending","uuid":"0de31d42-ff22-4817-9251-3c8842a8daf4"}
+{"description":"title screen","entry":"20200330T191053Z","modified":"20200330T191053Z","priority":"M","project":"miner","status":"pending","uuid":"b47323f2-1bf9-4b62-a622-9f172f261379"}
+{"description":"new enemy: bat","entry":"20200330T191108Z","modified":"20200330T191108Z","priority":"H","project":"miner","status":"pending","uuid":"b9886e7a-b3b3-4562-b5f7-735a824b3e6a"}
+{"description":"a proper goal","entry":"20200330T191313Z","modified":"20200330T191313Z","priority":"H","project":"miner","status":"pending","uuid":"3fdccef4-3add-4d21-9f51-ab40d04604db"}
+{"description":"score\/points","entry":"20200330T191343Z","modified":"20200330T191343Z","priority":"L","project":"miner","status":"pending","uuid":"2fcd46e4-e28a-4de9-843b-ba1b4795f84e"}
+{"description":"lava","entry":"20200330T191359Z","modified":"20200330T191359Z","priority":"M","project":"miner","status":"pending","uuid":"9886de0e-fd95-4482-ade2-a44c90eb57fe"}
+{"description":"add upgrades after each level","entry":"20200330T191429Z","modified":"20200330T191429Z","priority":"L","project":"miner.stretch","status":"pending","uuid":"3c849138-15e2-4624-94f3-e8fe38c2f933"}
+{"description":"add some progression","entry":"20200330T191454Z","modified":"20200330T191454Z","priority":"M","project":"miner","status":"pending","uuid":"bc8449b5-7f76-459f-a7bc-466ba128c355"}
+{"description":"add a task","entry":"20200330T193445Z","modified":"20200330T193445Z","status":"pending","uuid":"f6755122-78cb-44e3-ae7a-5476959c9fd2"}
+{"description":"add a task","end":"20200330T193451Z","entry":"20200330T193445Z","modified":"20200330T193451Z","status":"completed","uuid":"f6755122-78cb-44e3-ae7a-5476959c9fd2"}
