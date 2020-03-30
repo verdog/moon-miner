@@ -6,4 +6,4 @@
 [description:"score\/points" entry:"1585595623" modified:"1585595623" priority:"L" project:"miner" status:"pending" uuid:"2fcd46e4-e28a-4de9-843b-ba1b4795f84e"]
 [description:"lava" entry:"1585595639" modified:"1585595639" priority:"M" project:"miner" status:"pending" uuid:"9886de0e-fd95-4482-ade2-a44c90eb57fe"]
 [description:"add upgrades after each level" entry:"1585595669" modified:"1585595669" priority:"L" project:"miner.stretch" status:"pending" uuid:"3c849138-15e2-4624-94f3-e8fe38c2f933"]
-[description:"add some progression" entry:"1585595694" modified:"1585595694" priority:"M" project:"miner" status:"pending" uuid:"bc8449b5-7f76-459f-a7bc-466ba128c355"]
+[depends:"3fdccef4-3add-4d21-9f51-ab40d04604db" description:"add some progression" entry:"1585595694" modified:"1585597128" priority:"M" project:"miner" status:"pending" uuid:"bc8449b5-7f76-459f-a7bc-466ba128c355"]
