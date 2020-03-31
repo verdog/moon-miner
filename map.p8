@@ -97,14 +97,16 @@ function map_genblock()
 end
 
 function map_attempt_dig(x, y, _shake)
- local tx = x/16
- local ty = y/16
- local shake = _shake or true
+ local tx = flr(x/16)
+ local ty = flr(y/16)
+ local shake
+
+ if (_shake == nil) shake = true
 
  tile = map_get(tx,ty)
  if not map_empty(tile) then
   map_place(tx,ty,64)
-  vfx_p_block(tx*16+4,ty*16+4,1,10,2,3)
+  vfx_p_block(tx*16+8,ty*16+8,1,10,2,3)
 
   if shake == true then
    vfx_shake(2)

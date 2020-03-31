@@ -85,8 +85,8 @@ function vfx_p_smoke2(x,y,m,l,c)
 end
 
 function vfx_p_block(x,y,m,l,c,count)
-count = count or 1
-add(particles, {
+ count = count or 1
+ add(particles, {
 			kind="block1",
 			x=x, y=y,
 			xv=0,
