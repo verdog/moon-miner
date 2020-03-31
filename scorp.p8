@@ -101,13 +101,24 @@ function _scorp:update()
 	and self.grounded 
 	and (state == "mover" or state == "movel")
 	then
-		if state == "mover" then
-			self:pops()
-			add(self.states,"movel")
-		elseif state == "movel" then
-			self:pops()
-			add(self.states,"mover")
-		end
+  if state == "mover" then
+   -- small chance to dig
+   if rnd(8) < 1 then
+    -- diggy
+    map_attempt_dig(self.x+16,self.y,false)
+   else
+    self:pops()
+    add(self.states,"movel")
+   end
+  elseif state == "movel" then
+   -- small chance to dig
+   if rnd(8) < 1 then
+    map_attempt_dig(self.x-16,self.y,false)
+   else
+    self:pops()
+    add(self.states,"mover")
+   end
+  end
 	elseif player.y < self.y
 	and flr((4+player.x)/16) == flr((8+self.x)/16)
 	and state != "yump"

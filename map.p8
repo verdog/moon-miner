@@ -96,33 +96,43 @@ function map_genblock()
 	end
 end
 
+function map_attempt_dig(x, y, _shake)
+ local tx = x/16
+ local ty = y/16
+ local shake = _shake or true
+
+ tile = map_get(tx,ty)
+ if not map_empty(tile) then
+  map_place(tx,ty,64)
+  vfx_p_block(tx*16+4,ty*16+4,1,10,2,3)
+
+  if shake == true then
+   vfx_shake(2)
+  end
+  
+  if tile == 100 then
+   -- ammo drop
+   q = 4+flr(rnd(3))
+   for i=1,q do
+    ammo = _ammo:new({
+     x=tx*16+2,y=ty*16+2,
+     xvel=2*cos(rnd()),yvel=2*sin(rnd()),
+     flipx = rnd(1) < .5
+    })
+    add(ammos,ammo)
+   end
+  end
+			
+  -- generate new blocks
+  map_grow_from(tx,ty,true)
+ end
+end
+
 function map_update()
 	if player:a() and player.weapon == 0 and player.pickaxe > 0 then
-		local v = {
-			x=flr(player.curs.x/16),
-			y=flr(player.curs.y/16)
-		}
-		tile = map_get(v.x,v.y)
-		if not map_empty(tile) then
-			map_place(v.x,v.y,64)
-			vfx_p_block(player.curs.x+4,player.curs.y+4,1,10,2,3)
-			vfx_shake(2)
-			
-			if tile == 100 then
-				q = 4+flr(rnd(3))
-				for i=1,q do
-					ammo = _ammo:new({
-						x=v.x*16+2,y=v.y*16+2,
-						xvel=2*cos(rnd()),yvel=2*sin(rnd()),
-						flipx = rnd(1) < .5
-					})
-					add(ammos,ammo)
-				end
-			end
-			
-			-- generate new blocks
-			map_grow_from(v.x,v.y,true)
-			
+  result = map_attempt_dig(player.curs.x, player.curs.y)
+  
+  if result == true then
 			player.pickaxe -= player.pickprice
 			player.pickaxecharge = 0
 		end

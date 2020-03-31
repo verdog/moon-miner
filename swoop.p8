@@ -98,6 +98,4 @@ function _swoop:draw()
 	dsprite += 2*flr(self.sspeed*t()%2)
 	
  spr(dsprite, self.x-2, self.y-2,2,2,flipx)
-
- rect(self.x,self.y,self.x+self.width-1,self.y+self.height-1,9)
 end
