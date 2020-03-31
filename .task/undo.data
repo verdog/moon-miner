@@ -9,3 +9,7 @@ time 1585597128
 old [description:"add some progression" entry:"1585595694" modified:"1585595694" priority:"M" project:"miner" status:"pending" uuid:"bc8449b5-7f76-459f-a7bc-466ba128c355"]
 new [depends:"3fdccef4-3add-4d21-9f51-ab40d04604db" description:"add some progression" entry:"1585595694" modified:"1585597128" priority:"M" project:"miner" status:"pending" uuid:"bc8449b5-7f76-459f-a7bc-466ba128c355"]
 ---
+time 1585625682
+old [description:"new enemy: bat" entry:"1585595468" modified:"1585595468" priority:"H" project:"miner" status:"pending" uuid:"b9886e7a-b3b3-4562-b5f7-735a824b3e6a"]
+new [description:"new enemy: bat" end:"1585625682" entry:"1585595468" modified:"1585625682" priority:"H" project:"miner" status:"completed" uuid:"b9886e7a-b3b3-4562-b5f7-735a824b3e6a"]
+---

@@ -62,8 +62,6 @@ function _scorp:update()
  for s in all(self.states) do
   str = str..s.." "
  end
- debug(str)
- debug(self.statet)
  
 	if state == "mover" or state == "movel" then
 		if flr((self.y+8)/16) == flr((player.y+4)/16) 

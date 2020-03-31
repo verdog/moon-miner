@@ -1,5 +1,5 @@
 function enemies_init()
-	enemies = {}
+ enemies = {}
 end
 
 function enemies_update()

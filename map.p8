@@ -6,6 +6,7 @@ map_t2s[32] = 66
 map_t2s[33] = 96
 map_t2s[34] = 96
 map_t2s[35] = 96
+map_t2s[36] = 96
 
 -- feature table
 map_features = {
@@ -201,7 +202,17 @@ function map_make_feature(x,y,fi)
 						y=(y-f.y+j)*16
 					}) 
 				)
-			end
+   end
+   
+   if tile == 36 then
+    -- swoop
+    add(enemies,
+     _swoop:new({
+      x=(x-f.x+i)*16+2,
+      y=(y-f.y+j)*16
+     })
+    )
+   end
 			
 			map_place(x-f.x+i,y-f.y+j,map_t2s[tile])	
 		end

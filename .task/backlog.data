@@ -11,3 +11,4 @@
 {"description":"add a task","entry":"20200330T193445Z","modified":"20200330T193445Z","status":"pending","uuid":"f6755122-78cb-44e3-ae7a-5476959c9fd2"}
 {"description":"add a task","end":"20200330T193451Z","entry":"20200330T193445Z","modified":"20200330T193451Z","status":"completed","uuid":"f6755122-78cb-44e3-ae7a-5476959c9fd2"}
 {"depends":"3fdccef4-3add-4d21-9f51-ab40d04604db","description":"add some progression","entry":"20200330T191454Z","modified":"20200330T193848Z","priority":"M","project":"miner","status":"pending","uuid":"bc8449b5-7f76-459f-a7bc-466ba128c355"}
+{"description":"new enemy: bat","end":"20200331T033442Z","entry":"20200330T191108Z","modified":"20200331T033442Z","priority":"H","project":"miner","status":"completed","uuid":"b9886e7a-b3b3-4562-b5f7-735a824b3e6a"}
