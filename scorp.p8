@@ -28,7 +28,6 @@ function _scorp:die()
 	vfx_shake(8)
 	message("killed a scorp.")
 	_global.killed += 1
-	message(_global.goal - _global.killed.." to go.")
 	
 	if rnd(3) < 1 then
 		add(healths, _health:new({

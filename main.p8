@@ -1,6 +1,10 @@
 -- main loops and debug
 function _init()
-	debug_init()
+ debug_init()
+ 
+ _global.map_target_feats = 12
+	_global.map_spread = 32
+
 	player = _player:new()
 end
 
@@ -8,17 +12,16 @@ function start_level()
 	vfx_init()
 	enemies_init()
 	proj_init()
-	map_init() -- generates enemies too
+	map_init() -- generates enemies and crystal too
 	
 	player.x = 0
 	player.y = 0
 	
-	_global.goal = flr(#enemies*.65)
-	_global.killed = 0
+ _global.killed = 0
 	
 	ui_init()
 	
-	message("kill ".._global.goal.." beasts!")
+	message("find the crystal!")
 end
 
 function _update()
@@ -29,8 +32,9 @@ function _update()
 		proj_update()
 		if _global.state != "dead" then
 			player:update()
-		end
+  end
 		enemies_update()
+  _global.crystal:update()
 		vfx_update()
 	end
 	
@@ -47,12 +51,6 @@ function _update()
 	if _global.state == "play" or _global.state == "dead" then
 		ui_update(player)
 	end
-	
-	if _global.state == "play" then
-		if _global.killed == _global.goal then
-			start_level()
-		end
-	end
 end
 
 function _draw()
@@ -64,7 +62,8 @@ function _draw()
 		if _global.state != "dead" then
 			player:draw()
 		end
-		enemies_draw()
+  enemies_draw()
+  _global.crystal:draw()
 		vfx_draw(1)
 		ui_draw(player)
 	end

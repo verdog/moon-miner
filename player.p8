@@ -39,7 +39,7 @@ function _player:update()
 	if self:b() then
 		self.weapon = (self.weapon + 1)%2
 	end
-	
+
 	if self:a() and self.weapon == 1 and self.ammo > 0 then
 		vfx_shake(1)
 		self.ammo -= 1
@@ -191,11 +191,26 @@ function _player:actor_physics()
 end
 
 function _player:hit_enemy(e)
-	self:impulse(-5*sgn(e.x-self.x),-6)
-	self.hp -= e.damage
-	self:inv(30)
-	vfx_p_blood(self.x+4,self.y+4,.5+rnd(1),15+rnd(12),8,6)
-	vfx_shake(4)
+ if _global.crystal.state == "float" then
+  -- player not protected by crystal
+  self.hp -= e.damage
+  vfx_p_blood(self.x+4,self.y+4,.5+rnd(1),15+rnd(12),8,6)
+ else
+  -- player protected by crystal
+  _global.crystal.state = "float"
+  _global.crystal.xvel = self.xvel
+  _global.crystal.yvel = self.yvel
+
+  for i=0,#_global.crystal.posbuffer do
+   _global.crystal.posbuffer[i] = nil
+   _global.crystal.posp = 0
+  end
+
+  message("get it back!")
+ end
+ self:impulse(-5*sgn(e.x-self.x),-6)
+ self:inv(30)
+ vfx_shake(4)
 end
 
 function _player:hit_proj(p)

@@ -25,19 +25,24 @@ function map_init()
  -- place stone
  map_place(-1, 1, 104)
  map_place(0, 1, 104)
-	
-	-- generate 32 features
-	map_gend_feats = 0
-	spread = 32
-	while map_gend_feats < 12 do
-		x=rnd(spread)-spread/2
-		y=rnd(spread/2)-spread/4
+
+ -- place door
+ map_place(0,0,72)
+ 
+	-- generate features
+ map_gend_feats = 0
+	while map_gend_feats < _global.map_target_feats do
+		x=rnd(_global.map_spread)-_global.map_spread/2
+		y=rnd(_global.map_spread/2)-_global.map_spread/4
 		x += sgn(x)*2
 		y += sgn(y)*2
 		if map_make_feature(x,y) == true then
 			map_gend_feats += 1
 		end
-	end
+ end
+ 
+ -- place crystal
+ place_crystal(-16, -8)
 end
 
 function map_place(x,y,val)
@@ -135,7 +140,11 @@ function map_attempt_dig(x, y, _shake)
 			
   -- generate new blocks
   map_grow_from(tx,ty,true)
+
+  return true
  end
+
+ return false
 end
 
 function map_update()
@@ -253,5 +262,5 @@ function map_make_feature(x,y,fi)
 end
 
 function map_empty(t)
-	return t == 64 or t == 96
+	return t == 64 or t == 96 or t == 72
 end
