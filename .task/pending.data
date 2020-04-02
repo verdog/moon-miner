@@ -6,3 +6,4 @@
 [description:"lava" entry:"1585595639" modified:"1585595639" priority:"M" project:"miner" status:"pending" uuid:"9886de0e-fd95-4482-ade2-a44c90eb57fe"]
 [description:"add upgrades after each level" entry:"1585595669" modified:"1585595669" priority:"L" project:"miner.stretch" status:"pending" uuid:"3c849138-15e2-4624-94f3-e8fe38c2f933"]
 [depends:"3fdccef4-3add-4d21-9f51-ab40d04604db" description:"add some progression" entry:"1585595694" modified:"1585597128" priority:"M" project:"miner" status:"pending" uuid:"bc8449b5-7f76-459f-a7bc-466ba128c355"]
+[description:"stone" entry:"1585795340" modified:"1585795340" priority:"H" project:"miner" status:"pending" uuid:"9cbd8a4b-e5ec-47d1-afa9-014ecbfb996c"]

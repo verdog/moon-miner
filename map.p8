@@ -7,6 +7,7 @@ map_t2s[33] = 96
 map_t2s[34] = 96
 map_t2s[35] = 96
 map_t2s[36] = 96
+map_t2s[48] = 104
 
 -- feature table
 map_features = {
@@ -19,7 +20,11 @@ function map_init()
 	dim = 2^14
 	
 	-- starting cave
-	map_make_feature(-1,-1,1)
+ map_make_feature(-1,-1,1)
+ 
+ -- place stone
+ map_place(-1, 1, 104)
+ map_place(0, 1, 104)
 	
 	-- generate 32 features
 	map_gend_feats = 0
@@ -91,7 +96,9 @@ function map_genblock()
 	dice = rnd(100)
 	if dice < 5 then
 		return 100
-	else
+ elseif dice < 10 then
+  return 104
+ else
 		return 66
 	end
 end
@@ -104,7 +111,8 @@ function map_attempt_dig(x, y, _shake)
  if (_shake == nil) shake = true
 
  tile = map_get(tx,ty)
- if not map_empty(tile) then
+ -- check if its dirt or ore
+ if tile == 66 or tile == 100 then
   map_place(tx,ty,64)
   vfx_p_block(tx*16+8,ty*16+8,1,10,2,3)
 
