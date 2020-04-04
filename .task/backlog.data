@@ -22,3 +22,4 @@
 {"description":"lava","end":"20200404T014320Z","entry":"20200330T191359Z","modified":"20200404T014322Z","priority":"M","project":"miner","status":"deleted","uuid":"9886de0e-fd95-4482-ade2-a44c90eb57fe"}
 {"description":"fix ui bugs on death","entry":"20200404T014407Z","modified":"20200404T014407Z","priority":"L","project":"miner","status":"pending","uuid":"96bdad58-1df2-4238-9d1d-405cd2bfbc60"}
 {"description":"death screen","end":"20200404T020208Z","entry":"20200404T013218Z","modified":"20200404T020208Z","priority":"L","project":"miner","status":"completed","uuid":"295f5926-ee61-4cca-bbf7-0736ac6b545a"}
+{"description":"stats on death","entry":"20200404T020317Z","modified":"20200404T020317Z","priority":"L","project":"miner","status":"pending","uuid":"36a95b79-fe9d-4316-956f-6dd03cacc3c3"}

@@ -48,3 +48,6 @@ time 1585965728
 old [description:"death screen" entry:"1585963938" modified:"1585963938" priority:"L" project:"miner" status:"pending" uuid:"295f5926-ee61-4cca-bbf7-0736ac6b545a"]
 new [description:"death screen" end:"1585965728" entry:"1585963938" modified:"1585965728" priority:"L" project:"miner" status:"completed" uuid:"295f5926-ee61-4cca-bbf7-0736ac6b545a"]
 ---
+time 1585965797
+new [description:"stats on death" entry:"1585965797" modified:"1585965797" priority:"L" project:"miner" status:"pending" uuid:"36a95b79-fe9d-4316-956f-6dd03cacc3c3"]
+---

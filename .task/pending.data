@@ -6,3 +6,4 @@
 [depends:"3fdccef4-3add-4d21-9f51-ab40d04604db" description:"add some progression" entry:"1585595694" modified:"1585597128" priority:"M" project:"miner" status:"pending" uuid:"bc8449b5-7f76-459f-a7bc-466ba128c355"]
 [description:"in between screen" entry:"1585963928" modified:"1585963928" priority:"L" project:"miner" status:"pending" uuid:"f2d64bde-6fdd-4cbb-83b8-3f2fd0d3c815"]
 [description:"fix ui bugs on death" entry:"1585964647" modified:"1585964647" priority:"L" project:"miner" status:"pending" uuid:"96bdad58-1df2-4238-9d1d-405cd2bfbc60"]
+[description:"stats on death" entry:"1585965797" modified:"1585965797" priority:"L" project:"miner" status:"pending" uuid:"36a95b79-fe9d-4316-956f-6dd03cacc3c3"]
