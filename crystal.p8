@@ -17,16 +17,24 @@ function place_crystal(x, y)
   _global.crystal = _crystal:new()
  end
 
+ _global.crystal:reset()
  _global.crystal.x = x
  _global.crystal.y = y
 end
 
-function _crystal:update()
+function _crystal:reset()
+ for i=1,#self.posbuffer do
+  self.posbuffer[i] = nil
+  self.posp = 0
+ end
+end
 
+function _crystal:update()
  if self.state == "float" then
   self.fxchance = 2
   if not player.invuln and self:collides(player) then
    self.state = "follow"
+   player.ammo += 1
    message("now get out!")
   end
  elseif self.state == "follow" then
@@ -45,9 +53,6 @@ function _crystal:update()
 
   -- fxchance
   self.fxchance = 12
-
-  debug(#self.posbuffer)
-  debug(self.posp)
  end
 
  -- emit blood
@@ -56,10 +61,20 @@ function _crystal:update()
   vfx_p_blood(self.x+4, self.y+4, .5, 30, 8, 2)
  end
 
+ debug(self.x)
+ debug(self.y)
+
  self:env_physics()
 	self:move(self.xvel, self.yvel)
 end
 
 function _crystal:draw()
  spr(self.sprite, self.x-4, self.y-4 + 4*sin(t()), 2, 2, flipx)
+
+ if self.state == "follow" then
+  -- show button indicator above door
+  if t()*4 % 1 < .5 then
+   print("❎", 4, -4, 6)
+  end
+ end
 end

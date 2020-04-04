@@ -1,9 +1,6 @@
 -- main loops and debug
 function _init()
  debug_init()
- 
- _global.map_target_feats = 12
-	_global.map_spread = 32
 
 	player = _player:new()
 end
@@ -12,11 +9,14 @@ function start_level()
 	vfx_init()
 	enemies_init()
 	proj_init()
-	map_init() -- generates enemies and crystal too
+ 
+ _global.map_target_feats = 12
+	_global.map_spread = 36
+ map_init() -- generates enemies and crystal too
 	
 	player.x = 0
 	player.y = 0
-	
+ 
  _global.killed = 0
 	
 	ui_init()

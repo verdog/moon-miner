@@ -41,8 +41,11 @@ function _player:update()
 	end
 
 	if self:a() and self.weapon == 1 and self.ammo > 0 then
-		vfx_shake(1)
-		self.ammo -= 1
+  vfx_shake(1)
+  if _global.crystal.state != "follow" then
+   self.ammo -= 1
+  end
+  
 		local vx = 8
 		if not self.flipx then
 			add(projectiles, _proj:new({
@@ -66,7 +69,13 @@ function _player:update()
 		else
 			vfx_p_smoke2(self.x-5,self.y+4,1,10,6)
 		end
-	end
+ end
+ 
+ if self:a() and _global.crystal.state == "follow" then
+  if flr(self.x/16) == 0 and flr(self.y/16) == 0 then
+   start_level()
+  end
+ end
 	
 	self.pickaxecharge += 1
 	if self.pickaxecharge%2 == 0 and self.pickaxecharge > 20 then
@@ -201,10 +210,7 @@ function _player:hit_enemy(e)
   _global.crystal.xvel = self.xvel
   _global.crystal.yvel = self.yvel
 
-  for i=0,#_global.crystal.posbuffer do
-   _global.crystal.posbuffer[i] = nil
-   _global.crystal.posp = 0
-  end
+  _global.crystal:reset()
 
   message("get it back!")
  end

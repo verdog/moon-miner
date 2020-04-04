@@ -16,3 +16,6 @@ new [description:"new enemy: bat" end:"1585625682" entry:"1585595468" modified:"
 time 1585795340
 new [description:"stone" entry:"1585795340" modified:"1585795340" priority:"H" project:"miner" status:"pending" uuid:"9cbd8a4b-e5ec-47d1-afa9-014ecbfb996c"]
 ---
+time 1585801110
+new [description:"randomize get out message" entry:"1585801110" modified:"1585801110" priority:"H" project:"miner" status:"pending" uuid:"77bc0a45-5e0c-4b23-8cc5-f44582719c26"]
+---

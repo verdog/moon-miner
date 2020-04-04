@@ -31,18 +31,34 @@ function map_init()
  
 	-- generate features
  map_gend_feats = 0
+ local bigx = 0
+ local bigy = 0
 	while map_gend_feats < _global.map_target_feats do
 		x=rnd(_global.map_spread)-_global.map_spread/2
-		y=rnd(_global.map_spread/2)-_global.map_spread/4
+  y=rnd(_global.map_spread/2)-_global.map_spread/4
 		x += sgn(x)*2
-		y += sgn(y)*2
+  y += sgn(y)*2
 		if map_make_feature(x,y) == true then
-			map_gend_feats += 1
+   map_gend_feats += 1
+
+   -- check if its far
+   if abs(x) > abs(bigx) then
+    bigx = x
+    bigy = y
+   end
 		end
  end
+
+ -- generate last feature with crystal
+ -- spawn crystal if u want
+ local tilex = flr(bigx+4)
+ local tiley = flr(bigy+4)
+ map_place(tilex,tiley,96)
+ map_grow_from(tilex,tiley)
+ place_crystal(tilex*16+4, tiley*16+4)
  
- -- place crystal
- place_crystal(-16, -8)
+ -- reset crystal
+ _global.crystal.state = "float"
 end
 
 function map_place(x,y,val)
@@ -86,8 +102,6 @@ function map_chunk_hash(x,y)
 end
 
 function map_grow_from(x,y)
-	feat = feat or false
-
 	for x=x-1,x+1 do
 		for y=y-1,y+1 do
 			if map_get(x,y) == 0 then
@@ -139,7 +153,7 @@ function map_attempt_dig(x, y, _shake)
   end
 			
   -- generate new blocks
-  map_grow_from(tx,ty,true)
+  map_grow_from(tx,ty)
 
   return true
  end
@@ -194,7 +208,7 @@ function map_make_feature(x,y,fi)
 		f.y = flr(rnd(mh))
 		f.w = 3+flr(rnd(10))
 		f.h = 3+flr(rnd(10))
-	end
+ end
 	
 	x = flr(x)
 	y = flr(y)
@@ -245,7 +259,7 @@ function map_make_feature(x,y,fi)
 			
 			map_place(x-f.x+i,y-f.y+j,map_t2s[tile])	
 		end
-	end
+ end
 	
 	-- encase
 	for i = f.x,f.x+f.w-1 do
@@ -253,7 +267,7 @@ function map_make_feature(x,y,fi)
 			tile = mget(i%mw,j%mh)
 			if tile == 33 or tile == 34 or tile == 35 then
 				-- air block
-				map_grow_from(x-f.x+i,y-f.y+j,false)
+				map_grow_from(x-f.x+i,y-f.y+j)
 			end
 		end
 	end
