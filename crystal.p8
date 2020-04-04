@@ -12,6 +12,13 @@ _crystal = _actor:new({
  fxchance=3
 })
 
+getoutms = {
+ "now get out!",
+ "now scram!",
+ "now evacuate!",
+ "now you'd better leave!"
+}
+
 function place_crystal(x, y)
  if _global.crystal == nil then
   _global.crystal = _crystal:new()
@@ -35,7 +42,7 @@ function _crystal:update()
   if not player.invuln and self:collides(player) then
    self.state = "follow"
    player.ammo += 1
-   message("now get out!")
+   message(getoutms[flr(rnd(#getoutms) + 1)])
   end
  elseif self.state == "follow" then
   -- follow player

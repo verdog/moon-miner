@@ -19,3 +19,32 @@ new [description:"stone" entry:"1585795340" modified:"1585795340" priority:"H" p
 time 1585801110
 new [description:"randomize get out message" entry:"1585801110" modified:"1585801110" priority:"H" project:"miner" status:"pending" uuid:"77bc0a45-5e0c-4b23-8cc5-f44582719c26"]
 ---
+time 1585963906
+old [description:"a proper goal" entry:"1585595593" modified:"1585595593" priority:"H" project:"miner" status:"pending" uuid:"3fdccef4-3add-4d21-9f51-ab40d04604db"]
+new [description:"a proper goal" end:"1585963906" entry:"1585595593" modified:"1585963906" priority:"H" project:"miner" status:"completed" uuid:"3fdccef4-3add-4d21-9f51-ab40d04604db"]
+---
+time 1585963909
+old [description:"stone" entry:"1585795340" modified:"1585795340" priority:"H" project:"miner" status:"pending" uuid:"9cbd8a4b-e5ec-47d1-afa9-014ecbfb996c"]
+new [description:"stone" end:"1585963909" entry:"1585795340" modified:"1585963909" priority:"H" project:"miner" status:"completed" uuid:"9cbd8a4b-e5ec-47d1-afa9-014ecbfb996c"]
+---
+time 1585963928
+new [description:"in between screen" entry:"1585963928" modified:"1585963928" priority:"L" project:"miner" status:"pending" uuid:"f2d64bde-6fdd-4cbb-83b8-3f2fd0d3c815"]
+---
+time 1585963938
+new [description:"death screen" entry:"1585963938" modified:"1585963938" priority:"L" project:"miner" status:"pending" uuid:"295f5926-ee61-4cca-bbf7-0736ac6b545a"]
+---
+time 1585964379
+old [description:"randomize get out message" entry:"1585801110" modified:"1585801110" priority:"H" project:"miner" status:"pending" uuid:"77bc0a45-5e0c-4b23-8cc5-f44582719c26"]
+new [description:"randomize get out message" end:"1585964379" entry:"1585801110" modified:"1585964379" priority:"H" project:"miner" status:"completed" uuid:"77bc0a45-5e0c-4b23-8cc5-f44582719c26"]
+---
+time 1585964602
+old [description:"lava" entry:"1585595639" modified:"1585595639" priority:"M" project:"miner" status:"pending" uuid:"9886de0e-fd95-4482-ade2-a44c90eb57fe"]
+new [description:"lava" end:"1585964600" entry:"1585595639" modified:"1585964602" priority:"M" project:"miner" status:"deleted" uuid:"9886de0e-fd95-4482-ade2-a44c90eb57fe"]
+---
+time 1585964647
+new [description:"fix ui bugs on death" entry:"1585964647" modified:"1585964647" priority:"L" project:"miner" status:"pending" uuid:"96bdad58-1df2-4238-9d1d-405cd2bfbc60"]
+---
+time 1585965728
+old [description:"death screen" entry:"1585963938" modified:"1585963938" priority:"L" project:"miner" status:"pending" uuid:"295f5926-ee61-4cca-bbf7-0736ac6b545a"]
+new [description:"death screen" end:"1585965728" entry:"1585963938" modified:"1585965728" priority:"L" project:"miner" status:"completed" uuid:"295f5926-ee61-4cca-bbf7-0736ac6b545a"]
+---

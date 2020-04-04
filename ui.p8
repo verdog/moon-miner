@@ -12,7 +12,7 @@ end
 function ui_update(p)
 	messt += 1
 	
-	if messt%120 == 0 then
+ if messt%120 == 0 then
 		del(messq, messq[1])
 	end
 end

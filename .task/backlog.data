@@ -14,3 +14,11 @@
 {"description":"new enemy: bat","end":"20200331T033442Z","entry":"20200330T191108Z","modified":"20200331T033442Z","priority":"H","project":"miner","status":"completed","uuid":"b9886e7a-b3b3-4562-b5f7-735a824b3e6a"}
 {"description":"stone","entry":"20200402T024220Z","modified":"20200402T024220Z","priority":"H","project":"miner","status":"pending","uuid":"9cbd8a4b-e5ec-47d1-afa9-014ecbfb996c"}
 {"description":"randomize get out message","entry":"20200402T041830Z","modified":"20200402T041830Z","priority":"H","project":"miner","status":"pending","uuid":"77bc0a45-5e0c-4b23-8cc5-f44582719c26"}
+{"description":"a proper goal","end":"20200404T013146Z","entry":"20200330T191313Z","modified":"20200404T013146Z","priority":"H","project":"miner","status":"completed","uuid":"3fdccef4-3add-4d21-9f51-ab40d04604db"}
+{"description":"stone","end":"20200404T013149Z","entry":"20200402T024220Z","modified":"20200404T013149Z","priority":"H","project":"miner","status":"completed","uuid":"9cbd8a4b-e5ec-47d1-afa9-014ecbfb996c"}
+{"description":"in between screen","entry":"20200404T013208Z","modified":"20200404T013208Z","priority":"L","project":"miner","status":"pending","uuid":"f2d64bde-6fdd-4cbb-83b8-3f2fd0d3c815"}
+{"description":"death screen","entry":"20200404T013218Z","modified":"20200404T013218Z","priority":"L","project":"miner","status":"pending","uuid":"295f5926-ee61-4cca-bbf7-0736ac6b545a"}
+{"description":"randomize get out message","end":"20200404T013939Z","entry":"20200402T041830Z","modified":"20200404T013939Z","priority":"H","project":"miner","status":"completed","uuid":"77bc0a45-5e0c-4b23-8cc5-f44582719c26"}
+{"description":"lava","end":"20200404T014320Z","entry":"20200330T191359Z","modified":"20200404T014322Z","priority":"M","project":"miner","status":"deleted","uuid":"9886de0e-fd95-4482-ade2-a44c90eb57fe"}
+{"description":"fix ui bugs on death","entry":"20200404T014407Z","modified":"20200404T014407Z","priority":"L","project":"miner","status":"pending","uuid":"96bdad58-1df2-4238-9d1d-405cd2bfbc60"}
+{"description":"death screen","end":"20200404T020208Z","entry":"20200404T013218Z","modified":"20200404T020208Z","priority":"L","project":"miner","status":"completed","uuid":"295f5926-ee61-4cca-bbf7-0736ac6b545a"}

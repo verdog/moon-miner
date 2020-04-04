@@ -1,8 +1,16 @@
 -- main loops and debug
 function _init()
  debug_init()
+ reset()
+end
 
-	player = _player:new()
+function reset()
+ _global.state = "title"
+ _global.map_target_feats = 12
+ _global.map_spread = 36
+ player = _player:new()
+ canrestart = false
+ camera()
 end
 
 function start_level()
@@ -15,7 +23,8 @@ function start_level()
  map_init() -- generates enemies and crystal too
 	
 	player.x = 0
-	player.y = 0
+ player.y = 0
+ deadtimer = 0
  
  _global.killed = 0
 	
@@ -46,7 +55,20 @@ function _update()
 		
 	if _global.state == "title" then
 		title_update()
-	end
+ end
+ 
+ if _global.state == "dead" then
+  if #messq == 0 then
+   message("press ❎ to restart.")
+   canrestart = true
+  end
+
+  if btnp(❎) and canrestart == true then
+   reset()
+  end
+
+  debug(deadtimer)
+ end
 	
 	if _global.state == "play" or _global.state == "dead" then
 		ui_update(player)

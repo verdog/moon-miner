@@ -232,7 +232,8 @@ end
 
 function _player:die()
 	vfx_p_death(self.x+4,self.y+4,.5+rnd(1),15+rnd(12),8,6)
-	_global.state = "dead"
+ _global.state = "dead"
+ self.state = "dead"
 	message("you're dead.")
 end
 
