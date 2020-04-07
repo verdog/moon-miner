@@ -51,3 +51,37 @@ new [description:"death screen" end:"1585965728" entry:"1585963938" modified:"15
 time 1585965797
 new [description:"stats on death" entry:"1585965797" modified:"1585965797" priority:"L" project:"miner" status:"pending" uuid:"36a95b79-fe9d-4316-956f-6dd03cacc3c3"]
 ---
+time 1586222718
+old [description:"in between screen" entry:"1585963928" modified:"1585963928" priority:"L" project:"miner" status:"pending" uuid:"f2d64bde-6fdd-4cbb-83b8-3f2fd0d3c815"]
+new [description:"in between screen" end:"1586222718" entry:"1585963928" modified:"1586222718" priority:"L" project:"miner" status:"completed" uuid:"f2d64bde-6fdd-4cbb-83b8-3f2fd0d3c815"]
+---
+time 1586222749
+old [description:"stats on death" entry:"1585965797" modified:"1585965797" priority:"L" project:"miner" status:"pending" uuid:"36a95b79-fe9d-4316-956f-6dd03cacc3c3"]
+new [description:"stats on death" end:"1586222749" entry:"1585965797" modified:"1586222749" priority:"L" project:"miner" status:"completed" uuid:"36a95b79-fe9d-4316-956f-6dd03cacc3c3"]
+---
+time 1586222756
+old [description:"fix ui bugs on death" entry:"1585964647" modified:"1585964647" priority:"L" project:"miner" status:"pending" uuid:"96bdad58-1df2-4238-9d1d-405cd2bfbc60"]
+new [description:"fix ui bugs on death" end:"1586222756" entry:"1585964647" modified:"1586222756" priority:"L" project:"miner" status:"completed" uuid:"96bdad58-1df2-4238-9d1d-405cd2bfbc60"]
+---
+time 1586222758
+old [description:"score\/points" entry:"1585595623" modified:"1585595623" priority:"L" project:"miner" status:"pending" uuid:"2fcd46e4-e28a-4de9-843b-ba1b4795f84e"]
+new [description:"score\/points" end:"1586222758" entry:"1585595623" modified:"1586222758" priority:"L" project:"miner" status:"completed" uuid:"2fcd46e4-e28a-4de9-843b-ba1b4795f84e"]
+---
+time 1586222797
+new [description:"arrow towards goal" entry:"1586222797" modified:"1586222797" status:"pending" uuid:"0822cc70-0c29-4f05-b308-cd8c28c29cc9"]
+---
+time 1586222814
+old [description:"arrow towards goal" entry:"1586222797" modified:"1586222797" status:"pending" uuid:"0822cc70-0c29-4f05-b308-cd8c28c29cc9"]
+new [description:"arrow towards goal" entry:"1586222797" modified:"1586222814" priority:"L" project:"miner" status:"pending" uuid:"0822cc70-0c29-4f05-b308-cd8c28c29cc9"]
+---
+time 1586222839
+new [description:"high score" entry:"1586222839" modified:"1586222839" priority:"L" project:"miner" status:"pending" uuid:"ebac8862-2c86-427e-83f5-2fefa8737792"]
+---
+time 1586223300
+old [depends:"3fdccef4-3add-4d21-9f51-ab40d04604db" description:"add some progression" entry:"1585595694" modified:"1585597128" priority:"M" project:"miner" status:"pending" uuid:"bc8449b5-7f76-459f-a7bc-466ba128c355"]
+new [depends:"3fdccef4-3add-4d21-9f51-ab40d04604db" description:"add some progression" end:"1586223300" entry:"1585595694" modified:"1586223300" priority:"M" project:"miner" status:"completed" uuid:"bc8449b5-7f76-459f-a7bc-466ba128c355"]
+---
+time 1586227359
+old [description:"arrow towards goal" entry:"1586222797" modified:"1586222814" priority:"L" project:"miner" status:"pending" uuid:"0822cc70-0c29-4f05-b308-cd8c28c29cc9"]
+new [description:"arrow towards goal" end:"1586227359" entry:"1586222797" modified:"1586227359" priority:"L" project:"miner" status:"completed" uuid:"0822cc70-0c29-4f05-b308-cd8c28c29cc9"]
+---
