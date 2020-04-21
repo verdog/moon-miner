@@ -32,3 +32,5 @@
 {"description":"high score","entry":"20200407T012719Z","modified":"20200407T012719Z","priority":"L","project":"miner","status":"pending","uuid":"ebac8862-2c86-427e-83f5-2fefa8737792"}
 {"depends":"3fdccef4-3add-4d21-9f51-ab40d04604db","description":"add some progression","end":"20200407T013500Z","entry":"20200330T191454Z","modified":"20200407T013500Z","priority":"M","project":"miner","status":"completed","uuid":"bc8449b5-7f76-459f-a7bc-466ba128c355"}
 {"description":"arrow towards goal","end":"20200407T024239Z","entry":"20200407T012637Z","modified":"20200407T024239Z","priority":"L","project":"miner","status":"completed","uuid":"0822cc70-0c29-4f05-b308-cd8c28c29cc9"}
+{"description":"title screen","end":"20200421T002249Z","entry":"20200330T191053Z","modified":"20200421T002249Z","priority":"M","project":"miner","status":"completed","uuid":"b47323f2-1bf9-4b62-a622-9f172f261379"}
+{"description":"add upgrades after each level","end":"20200421T002259Z","entry":"20200330T191429Z","modified":"20200421T002259Z","priority":"L","project":"miner.stretch","status":"completed","uuid":"3c849138-15e2-4624-94f3-e8fe38c2f933"}

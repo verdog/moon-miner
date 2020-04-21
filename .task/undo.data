@@ -85,3 +85,11 @@ time 1586227359
 old [description:"arrow towards goal" entry:"1586222797" modified:"1586222814" priority:"L" project:"miner" status:"pending" uuid:"0822cc70-0c29-4f05-b308-cd8c28c29cc9"]
 new [description:"arrow towards goal" end:"1586227359" entry:"1586222797" modified:"1586227359" priority:"L" project:"miner" status:"completed" uuid:"0822cc70-0c29-4f05-b308-cd8c28c29cc9"]
 ---
+time 1587428569
+old [description:"title screen" entry:"1585595453" modified:"1585595453" priority:"M" project:"miner" status:"pending" uuid:"b47323f2-1bf9-4b62-a622-9f172f261379"]
+new [description:"title screen" end:"1587428569" entry:"1585595453" modified:"1587428569" priority:"M" project:"miner" status:"completed" uuid:"b47323f2-1bf9-4b62-a622-9f172f261379"]
+---
+time 1587428579
+old [description:"add upgrades after each level" entry:"1585595669" modified:"1585595669" priority:"L" project:"miner.stretch" status:"pending" uuid:"3c849138-15e2-4624-94f3-e8fe38c2f933"]
+new [description:"add upgrades after each level" end:"1587428579" entry:"1585595669" modified:"1587428579" priority:"L" project:"miner.stretch" status:"completed" uuid:"3c849138-15e2-4624-94f3-e8fe38c2f933"]
+---

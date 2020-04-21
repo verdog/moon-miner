@@ -1,3 +1,5 @@
+[description:"add upgrades after each level" end:"1587428579" entry:"1585595669" modified:"1587428579" priority:"L" project:"miner.stretch" status:"completed" uuid:"3c849138-15e2-4624-94f3-e8fe38c2f933"]
+[description:"title screen" end:"1587428569" entry:"1585595453" modified:"1587428569" priority:"M" project:"miner" status:"completed" uuid:"b47323f2-1bf9-4b62-a622-9f172f261379"]
 [description:"arrow towards goal" end:"1586227359" entry:"1586222797" modified:"1586227359" priority:"L" project:"miner" status:"completed" uuid:"0822cc70-0c29-4f05-b308-cd8c28c29cc9"]
 [depends:"3fdccef4-3add-4d21-9f51-ab40d04604db" description:"add some progression" end:"1586223300" entry:"1585595694" modified:"1586223300" priority:"M" project:"miner" status:"completed" uuid:"bc8449b5-7f76-459f-a7bc-466ba128c355"]
 [description:"score\/points" end:"1586222758" entry:"1585595623" modified:"1586222758" priority:"L" project:"miner" status:"completed" uuid:"2fcd46e4-e28a-4de9-843b-ba1b4795f84e"]
