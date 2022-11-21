@@ -2,7 +2,7 @@
 
 # moon-miner
 
-"infinite" ultra-violent mining game for pico8 
+infinite mining game for pico8 
 
 This is a full game for [pico-8](https://www.lexaloffle.com/pico-8.php).
 
